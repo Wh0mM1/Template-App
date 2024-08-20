@@ -22,7 +22,7 @@ export const DefineFields = () => {
       style={{ padding: 20, backgroundColor: "#f5f5f5", minHeight: "100vh" }}
     >
       <div style={{ justifyContent: "space-between", display: "flex" }}>
-        <div></div>
+        <h2 style={{ color: "#007BFF", marginBottom: 20 }}>Dashboard</h2>
         <button
           style={{
             backgroundColor: "#007BFF",
@@ -31,6 +31,7 @@ export const DefineFields = () => {
             padding: "10px 20px",
             borderRadius: "5px",
             cursor: "pointer",
+            height: 35,
           }}
           onClick={() => {
             navigate("/add-org");
