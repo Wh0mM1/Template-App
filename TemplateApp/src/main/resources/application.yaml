@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: template_db
+      database: templates
+
+
+
+#      username: stuart
+#      password: stuartdto
+#      database: mydatabase
