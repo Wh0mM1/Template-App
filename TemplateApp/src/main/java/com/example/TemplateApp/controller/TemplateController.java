@@ -1,13 +1,17 @@
 package com.example.TemplateApp.controller;
 
+import com.example.TemplateApp.service.OrgService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.log4j.Log4j2;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 
 import java.util.List;
 
@@ -20,6 +24,9 @@ public class TemplateController {
 
     @Autowired
     private MongoTemplate mongoTemplate;
+
+    @Autowired
+    private OrgService orgService;
 
     @PostMapping("/{companyName}")
     public String insertJson(@PathVariable String companyName, @RequestBody String jsonInput) {
@@ -36,4 +43,11 @@ public class TemplateController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/export/{collectionName}")
+    public StreamingResponseBody exportCollectionToCsv(@PathVariable String collectionName, HttpServletResponse response) {
+        response.setContentType("text/csv");
+        response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + collectionName + ".csv");
+
+        return orgService.downloadCollectionAsCsv(collectionName);
+    }
 }

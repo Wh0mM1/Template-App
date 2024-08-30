@@ -40,6 +40,9 @@ export const TemplateScreen = () => {
         }}
       >
         <h2 style={{ color: "#007BFF", marginBottom: 20 }}>Template Screen</h2>
+        <h2 style={{ color: "#007BFF", marginBottom: 20 }}>
+          {location.state.companyName}
+        </h2>
         <button
           style={{
             backgroundColor: "#007BFF",
@@ -112,6 +115,22 @@ export const TemplateScreen = () => {
           ))}
         </div>
       ))}
+      <button
+        style={{
+          marginTop: 30,
+          backgroundColor: "#007BFF",
+          color: "#FFF",
+          border: "none",
+          padding: "10px 20px 10px 20px",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          window.location.href = `http://localhost:8080/template/export/${location.state.companyName}`;
+        }}
+      >
+        Download
+      </button>
     </div>
   );
 };
