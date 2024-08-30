@@ -24,8 +24,11 @@ The application is structured as follows:
 
 **System Design (Basic):**
 ![System Design](https://github.com/user-attachments/assets/c9a617e3-00c1-4627-9937-66b2032eacd4)
+<div align="center">
+  <img align="center" src="https://github.com/user-attachments/assets/b22a550c-5d6b-4480-a982-61cd85ed1b06"/>
+</div>
 
-<img width="837" alt="Screenshot 2024-08-30 at 9 04 44 PM" src="https://github.com/user-attachments/assets/b22a550c-5d6b-4480-a982-61cd85ed1b06">
+
 ---
 
 **Dashboard:**
