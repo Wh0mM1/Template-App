@@ -42,7 +42,7 @@ Allows users to customize and manage the template fields for each organization.
 
 ![View and Edit Templates](https://github.com/user-attachments/assets/eecfb62f-4a36-4be8-80a8-133a968e4481)
 
-**Add New Fields:**
+**Technologies:**
 <div align="center">
   <img align="center" src="https://github.com/user-attachments/assets/02289bc1-86c5-49eb-b4fb-f201d7083184"/>
 </div>
