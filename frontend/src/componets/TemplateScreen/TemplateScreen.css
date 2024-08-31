@@ -1,0 +1,57 @@
+.template-screen {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.title,
+.company-name {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.add-button,
+.delete-button,
+.download-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.column-headers,
+.user-row {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.column-header,
+.user-data {
+  width: 10%;
+  text-align: center;
+  color: #333;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.user-row.even {
+  background-color: #e9ecef;
+}
+
+.user-row.odd {
+  background-color: #fff;
+}
+
+.download-button {
+  margin-top: 30px;
+}

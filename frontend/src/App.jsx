@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import { DefineFields } from "./componets/DefineFields";
-import { TemplateScreen } from "./componets/TemplateScreen";
+import { TemplateScreen } from "./componets/TemplateScreen/TemplateScreen";
 import { AddOrg } from "./componets/AddOrg";
 import { AddUser } from "./componets/AddUser";
 import { EditFileds } from "./componets/EditFields";
