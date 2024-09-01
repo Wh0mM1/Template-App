@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import "./AddUser.css"; // Import the CSS file
 
 export const AddUser = () => {
   const navigate = useNavigate();
@@ -21,45 +22,20 @@ export const AddUser = () => {
   }, [location.state.companyName]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#f5f5f5",
-      }}
-    >
-      <div
-        style={{
-          padding: "20px",
-          paddingRight: "30px", // Horizontal padding on the right
-          backgroundColor: "#FFF",
-          borderRadius: "8px",
-          boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
-          width: "80%", // Optional: Set a width to ensure consistency in layout
-          maxWidth: "600px", // Optional: Limit the maximum width
-        }}
-      >
-        <h2 style={{ marginBottom: "20px", color: "#007BFF" }}>
-          Adding User To Company
-        </h2>
+    <div className="container">
+      <div className="form-container">
+        <h2 className="form-title">Adding User To Company</h2>
         {cols.map((col, i) => (
-          <div key={i} style={{ marginBottom: "10px" }}>
-            <div style={{ marginBottom: "5px", color: "#333" }}>
-              <label style={{ fontWeight: "bold" }}>{col}:</label>
+          <div key={i} className="form-group">
+            <div className="form-label">
+              <label>{col}:</label>
             </div>
             <div>
               <input
                 type="text"
+                className="form-input"
                 onChange={(e) => {
                   data[col] = e.target.value;
-                }}
-                style={{
-                  width: "100%",
-                  padding: "8px",
-                  borderRadius: "4px",
-                  border: "1px solid #ced4da",
                 }}
               />
             </div>
@@ -67,15 +43,7 @@ export const AddUser = () => {
         ))}
         <br />
         <button
-          style={{
-            width: "100%",
-            padding: "10px",
-            backgroundColor: "#007BFF",
-            color: "#FFF",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
+          className="submit-button"
           onClick={async () => {
             console.log(data);
             await fetch(

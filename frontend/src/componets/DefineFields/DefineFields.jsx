@@ -21,21 +21,28 @@ export const DefineFields = () => {
   }, []);
 
   const deleteOrg = async (companyName) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/orgs/${companyName}`,
-        {
-          method: "DELETE",
-        }
-      );
+    // Show confirmation dialog
+    const isConfirmed = window.confirm(
+      `Are you sure you want to delete ${companyName}?`
+    );
 
-      if (response.ok) {
-        fetchOrgs();
-      } else {
-        console.error("Failed to delete org");
+    if (isConfirmed) {
+      try {
+        const response = await fetch(
+          `http://localhost:8080/orgs/${companyName}`,
+          {
+            method: "DELETE",
+          }
+        );
+
+        if (response.ok) {
+          fetchOrgs();
+        } else {
+          console.error("Failed to delete org");
+        }
+      } catch (error) {
+        console.error("Error deleting org:", error.message);
       }
-    } catch (error) {
-      console.error("Error deleting org:", error.message);
     }
   };
 

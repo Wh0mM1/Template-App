@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./EditFields.css"; // Import the CSS file
 
-export const EditFileds = () => {
+export const EditFields = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("Predefined Value");
@@ -23,30 +24,11 @@ export const EditFileds = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#f5f5f5",
-      }}
-    >
-      <div
-        style={{
-          padding: "20px",
-          backgroundColor: "#FFF",
-          borderRadius: "8px",
-          boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
-          width: "80%",
-          maxWidth: "500px",
-        }}
-      >
-        <h2 style={{ marginBottom: "20px", color: "#007BFF" }}>
-          Editing fields of company
-        </h2>
-        <div style={{ marginBottom: "15px", color: "#333" }}>
-          <label style={{ fontWeight: "bold" }}>Company Name: </label>
+    <div className="container">
+      <div className="form-container">
+        <h2 className="form-title">Editing fields of company</h2>
+        <div className="company-name">
+          <label>Company Name: </label>
           {location.state.companyName}
         </div>
         <div style={{ marginBottom: "15px" }}>
@@ -54,26 +36,12 @@ export const EditFileds = () => {
             type="text"
             value={inputValue}
             onChange={handleChange}
-            style={{
-              width: "100%",
-              padding: "8px",
-              borderRadius: "4px",
-              border: "1px solid #ced4da",
-            }}
+            className="form-input"
           />
         </div>
         <div>
           <button
-            style={{
-              marginTop: 10,
-              width: "100%",
-              padding: "10px",
-              backgroundColor: "#007BFF",
-              color: "#FFF",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
+            className="submit-button"
             onClick={async () => {
               console.log(inputValue);
               await fetch(

@@ -138,9 +138,15 @@ export const TemplateScreen = () => {
             ))}
             <button
               className="delete-button"
-              onClick={() =>
-                deleteUser({ fieldName: cols[0], fieldValue: user[cols[0]] })
-              }
+              onClick={() => {
+                const isConfirmed = window.confirm(
+                  `Are you sure you want to delete ${user[cols[0]]}?`
+                );
+
+                if (isConfirmed) {
+                  deleteUser({ fieldName: cols[0], fieldValue: user[cols[0]] });
+                }
+              }}
             >
               Delete
             </button>
