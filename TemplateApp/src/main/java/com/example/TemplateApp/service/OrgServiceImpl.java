@@ -4,15 +4,20 @@ import com.example.TemplateApp.Document.Organization;
 import com.example.TemplateApp.repository.OrgRepository;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
+import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
-
+import org.bson.Document;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -75,28 +80,5 @@ public class OrgServiceImpl implements OrgService {
         log.info("Updated fields for organization {}: {}", name, updatedFields);
     }
 
-    public StreamingResponseBody downloadCollectionAsCsv(String collectionName) {
-        List<Map> documents = mongoTemplate.findAll(Map.class, collectionName);
 
-        return outputStream -> {
-            if (!documents.isEmpty()) {
-                // Set to collect all field names across documents
-                Set<String> headers = new HashSet<>();
-
-                // Accumulate all possible field names
-                for (Map<String, Object> document : documents) {
-                    headers.addAll(document.keySet());
-                }
-
-                try (OutputStreamWriter writer = new OutputStreamWriter(outputStream);
-                     CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader(headers.toArray(new String[0])))) {
-
-                    // Write each document's values as a CSV record
-                    for (Map<String, Object> document : documents) {
-                        csvPrinter.printRecord(headers.stream().map(document::get).toArray());
-                    }
-                }
-            }
-        };
-    }
 }

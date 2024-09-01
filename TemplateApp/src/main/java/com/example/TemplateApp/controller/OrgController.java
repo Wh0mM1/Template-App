@@ -4,8 +4,11 @@ package com.example.TemplateApp.controller;
 import com.example.TemplateApp.Document.Organization;
 import com.example.TemplateApp.model.OrgRequest;
 import com.example.TemplateApp.service.OrgService;
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +38,7 @@ public class OrgController {
 
     @GetMapping("/{name}")
     public ResponseEntity<Organization> getOrgInfo(@PathVariable String name){
+
         return new ResponseEntity<>(orgService.getOrgInfo(name), HttpStatus.OK);
     }
 
@@ -42,6 +46,15 @@ public class OrgController {
     public String editFields(@PathVariable String name,@RequestBody String fields){
         orgService.editFields(name,fields);
         return "Fields Edit Successful";
+    }
+
+
+    @DeleteMapping("/{compName}")
+    public String deleteCompany(@PathVariable String compName){
+        Query query=new Query(Criteria.where("company").is(compName));
+        mongoTemplate.remove(query, Document.class,"org_names");
+        mongoTemplate.dropCollection(compName);
+        return "Company: "+ compName+" is removed";
     }
 
 }

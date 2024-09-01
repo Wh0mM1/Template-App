@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ddb7829-aa27-44f7-a79f-dfc2c4f66e24" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/TemplateApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/pom.xml" afterDir="false" />
+    <list default="true" id="15b105ca-86db-4a2d-838a-9a79e630e660" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/TemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/TemplateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/model/DeleteBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/model/DeleteBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/componets/DefineFields.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +27,14 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,25 +52,25 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="2lNU8HYMJGcMeakFQGrIEoes3OK" />
+  <component name="ProjectId" id="2lNvhYtZfPheuYf4ggDF9Hsd6Z7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ddb7829-aa27-44f7-a79f-dfc2c4f66e24" name="Changes" comment="" />
-      <created>1725019870787</created>
+      <changelist id="15b105ca-86db-4a2d-838a-9a79e630e660" name="Changes" comment="" />
+      <created>1725033472687</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1725019870787</updated>
+      <updated>1725033472687</updated>
     </task>
     <servers />
   </component>

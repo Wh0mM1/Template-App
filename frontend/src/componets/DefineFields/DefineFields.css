@@ -1,0 +1,98 @@
+.define-fields-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.header-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+}
+
+.org-list-header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.org-list-item {
+  width: 12%;
+}
+
+.org-list-item-container {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #dee2e6;
+  align-items: center;
+}
+
+.org-list-item-container.even {
+  background-color: #e9ecef;
+}
+
+.org-fields {
+  display: flex;
+  width: 10%;
+}
+
+.org-field {
+  padding-right: 10px;
+}
+
+/* Specific button styles */
+.edit-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: "#28A745";
+  color: #fff;
+  border: none;
+  padding: 5px 10px; /* Ensure padding is consistent */
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #007bff; /* Blue color for edit button */
+}
+
+.view-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: "#28A745";
+  color: #fff;
+  border: none;
+  padding: 5px 10px; /* Ensure padding is consistent */
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #28a745; /* Green color for view button */
+}
+
+.del-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: "#28A745";
+  color: #fff;
+  border: none;
+  padding: 5px 10px; /* Ensure padding is consistent */
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #dc3545; /* Red color for delete button */
+}

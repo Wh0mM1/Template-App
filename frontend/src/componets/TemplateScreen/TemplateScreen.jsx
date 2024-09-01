@@ -4,10 +4,52 @@ import "./TemplateScreen.css";
 
 export const TemplateScreen = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [cols, setCols] = useState([]);
-  const navigate = useNavigate();
+  const [selectedFile, setSelectedFile] = useState(null);
 
+  // Handle file selection
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  // Handle file upload
+  const handleFileUpload = () => {
+    if (!selectedFile) {
+      alert("Please select a file first.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    fetch(
+      `http://localhost:8080/template/upload-csv/${location.state.companyName}`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          return response.text().then((text) => {
+            throw new Error(text);
+          });
+        }
+        return response.text();
+      })
+      .then(() => {
+        alert("File uploaded successfully.");
+        fetchUsers(); // Refresh users list after successful upload
+      })
+      .catch((error) => {
+        console.error("Error uploading file:", error.message);
+        alert(`Failed to upload file: ${error.message}`);
+      });
+  };
+
+  // Fetch user data
   const fetchUsers = useCallback(async () => {
     try {
       const response = await fetch(
@@ -15,11 +57,12 @@ export const TemplateScreen = () => {
       );
       const data = await response.json();
       setUsers(data);
-    } catch (err) {
-      console.error("Error fetching users:", err.message);
+    } catch (error) {
+      console.error("Error fetching users:", error.message);
     }
   }, [location.state.companyName]);
 
+  // Fetch column data
   const fetchCols = useCallback(async () => {
     try {
       const response = await fetch(
@@ -27,11 +70,12 @@ export const TemplateScreen = () => {
       );
       const data = await response.json();
       setCols(data.fields);
-    } catch (err) {
-      console.error("Error fetching columns:", err.message);
+    } catch (error) {
+      console.error("Error fetching columns:", error.message);
     }
   }, [location.state.companyName]);
 
+  // Handle user deletion
   const deleteUser = async ({ fieldName, fieldValue }) => {
     try {
       const response = await fetch(
@@ -40,15 +84,16 @@ export const TemplateScreen = () => {
       );
 
       if (response.ok) {
-        await fetchUsers();
+        fetchUsers(); // Refresh users list after successful deletion
       } else {
         console.error("Failed to delete user");
       }
-    } catch (err) {
-      console.error("Error deleting user:", err.message);
+    } catch (error) {
+      console.error("Error deleting user:", error.message);
     }
   };
 
+  // Fetch users and columns on component mount
   useEffect(() => {
     fetchUsers();
     fetchCols();
@@ -56,7 +101,7 @@ export const TemplateScreen = () => {
 
   return (
     <div className="template-screen">
-      <div className="header">
+      <header className="header">
         <h2 className="title">Template Screen</h2>
         <h2 className="company-name">{location.state.companyName}</h2>
         <button
@@ -69,7 +114,7 @@ export const TemplateScreen = () => {
         >
           Add
         </button>
-      </div>
+      </header>
 
       <div
         className="column-headers"
@@ -103,14 +148,25 @@ export const TemplateScreen = () => {
         ))}
       </div>
 
-      <button
-        className="download-button"
-        onClick={() =>
-          (window.location.href = `http://localhost:8080/template/export/${location.state.companyName}`)
-        }
-      >
-        Download
-      </button>
+      <div className="button-container">
+        <button
+          className="download-button"
+          onClick={() =>
+            (window.location.href = `http://localhost:8080/template/export/${location.state.companyName}`)
+          }
+        >
+          Download
+        </button>
+        <input
+          type="file"
+          accept=".csv"
+          onChange={handleFileChange}
+          className="file-input"
+        />
+        <button className="upload-button" onClick={handleFileUpload}>
+          Upload
+        </button>
+      </div>
     </div>
   );
 };
