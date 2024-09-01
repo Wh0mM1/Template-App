@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b105ca-86db-4a2d-838a-9a79e630e660" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/TemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/TemplateServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/model/DeleteBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/model/DeleteBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/service/OrgServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/componets/DefineFields.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/componets/TemplateScreen/TemplateScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
