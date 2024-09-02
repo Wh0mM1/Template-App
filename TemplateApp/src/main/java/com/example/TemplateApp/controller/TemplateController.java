@@ -23,7 +23,8 @@ import java.util.List;
 
 @Log4j2
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:3000")
+
 @RequestMapping("/template")
 public class TemplateController {
 

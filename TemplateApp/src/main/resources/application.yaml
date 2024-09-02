@@ -1,13 +1,12 @@
 spring:
   data:
+
     mongodb:
+      uri: mongodb://localhost:27017/templates
       host: localhost
       port: 27017
       authentication-database: template_db
       database: templates
-
-
-
 #      username: stuart
 #      password: stuartdto
 #      database: mydatabase

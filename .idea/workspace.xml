@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b105ca-86db-4a2d-838a-9a79e630e660" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/OrgController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/java/com/example/TemplateApp/controller/TemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateApp/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/TemplateApp/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

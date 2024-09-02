@@ -1,0 +1,35 @@
+version: "3.0"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./TemplateApp
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/templates
+    depends_on:
+      - mongodb
+      - frontend
+
+networks:
+  app-network:
+    driver: bridge
