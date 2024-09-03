@@ -54,6 +54,16 @@ Allows users to customize and manage the template fields for each organization.
   <img align="center" src="https://github.com/user-attachments/assets/02289bc1-86c5-49eb-b4fb-f201d7083184"/>
 </div>
 
+**Dockerization:**
+
+1. I have made docker-compose.yml file in order to start application by one click.
+2. order to implement this you need to fetch monngo image in your local system (docker pull mongo)
+3. You can just type: docker-compose up --build
+
+<img width="1178" alt="Screenshot 2024-09-03 at 6 09 12 PM" src="https://github.com/user-attachments/assets/142202ab-61b4-415e-8d09-939ccaaaf487">
+
+
+
 ### Instructions for Use
 
 1. **Dashboard:** Navigate through the organizations and click on any organization to view detailed information.
