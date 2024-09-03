@@ -11,7 +11,7 @@
 
 ### Overview
 
-This project allows a web application to define customizable templates for organizations, enabling each organization to have a unique set of column names. Users can easily change and add new mappings for these templates through an intuitive UI.
+This project allows a web application to define customizable templates for organizations, enabling each organization to have a unique set of column names. Users can easily change and add new mappings for these templates through an intuitive UI. We can upload csv file in order to add user list in particular company or we can even download the data for particular company in csv format.
 
 ### System Design
 
@@ -34,16 +34,20 @@ The application is structured as follows:
 **Dashboard:**
 Displays all information related to organizations in the system.
 
-**View and Edit Templates:**
-![Dashboard](https://github.com/user-attachments/assets/e0751819-3e3a-4b4b-83e8-472c5c91bbb1)
+**View, Edit and Delete Templates:**
 
+![image](https://github.com/user-attachments/assets/359a44c0-cbe7-4128-a85c-632230236ba6)
 
 ---
 
 **Template Screen:**
 Allows users to customize and manage the template fields for each organization.
 
-![View and Edit Templates](https://github.com/user-attachments/assets/eecfb62f-4a36-4be8-80a8-133a968e4481)
+![image](https://github.com/user-attachments/assets/57da4063-f395-40dc-a3b2-3f8e9baec637)
+
+**Downloaded Csv:**
+
+<img width="1470" alt="Screenshot 2024-09-03 at 5 54 55 PM" src="https://github.com/user-attachments/assets/e7f908d1-e1bc-4426-9d87-1d52f82e55b8">
 
 **Technologies:**
 <div align="center">
