@@ -1,12 +1,9 @@
 package com.example.TemplateApp.controller;
 
-import com.example.TemplateApp.Document.Organization;
-import com.example.TemplateApp.service.OrgService;
 import com.example.TemplateApp.service.TemplateService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.log4j.Log4j2;
 import org.bson.Document;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
