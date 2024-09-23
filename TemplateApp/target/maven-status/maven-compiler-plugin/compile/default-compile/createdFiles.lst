@@ -1,0 +1,15 @@
+com/example/TemplateApp/TemplateAppApplication.class
+com/example/TemplateApp/model/OrgRequest$OrgRequestBuilder.class
+com/example/TemplateApp/Document/Organization$OrganizationBuilder.class
+com/example/TemplateApp/service/TemplateService.class
+com/example/TemplateApp/Document/Templates$TemplatesBuilder.class
+com/example/TemplateApp/service/TemplateServiceImpl.class
+com/example/TemplateApp/model/OrgRequest.class
+com/example/TemplateApp/service/OrgServiceImpl.class
+com/example/TemplateApp/repository/OrgRepository.class
+com/example/TemplateApp/Document/Organization.class
+com/example/TemplateApp/Document/Templates.class
+com/example/TemplateApp/controller/TemplateController.class
+com/example/TemplateApp/service/OrgService.class
+com/example/TemplateApp/model/DeleteBody.class
+com/example/TemplateApp/controller/OrgController.class
